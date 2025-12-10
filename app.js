@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 8080;
 const path = require('node:path');
 const HompageRouter = require('./routes/indexRouter');
 const NewMessageRouter = require('./routes/new');
@@ -23,5 +23,5 @@ app.use((err, req, res, next) => {
 
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 })
