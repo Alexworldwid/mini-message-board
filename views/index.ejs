@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title><%= title %></title>
+    </head>
+
+    <body>
+        <section>
+            <h1>Welcome to the Message Board homepage</h1>
+            <a href="/new">Create a New Message</a>
+        </section>
+        <section>
+            <p>messages</p>
+            <% messages.forEach((message, index) => { %>
+                <article>
+                    <p><%= message.text %></p>
+                    <p><%= message.user %></p>
+                    <p><%= message.added %></p>
+                    <a href="/new/<%= index %>">view message</a>
+                </article>
+            <% }) %>
+        </section>
+    </body>
+</html>
